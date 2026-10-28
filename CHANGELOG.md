@@ -4,7 +4,9 @@ Le numéro de version suit les TP : 0.N.0 à la fin du TP N. Chaque version publ
 
 ## 0.6.0 (TP6) : le paquet
 
-- *À compléter par le binôme : ce qui a changé pour celui qui installe, pour celui qui développe, pour la CI.*
+- **Pour celui qui installe** : une roue, `sentiment_app-0.6.0-py3-none-any.whl`, qui s'installe avec `pip` et installe seule ses dépendances (FastAPI, uvicorn, Pydantic, scikit-learn 1.5, joblib) ; l'interface est un extra, `sentiment-app[ui]`. Elle fournit la commande `sentiment` : `--version`, `predict`, `serve`, `ui`. Le modèle n'est pas dans la roue : la variable `SENTIMENT_MODELE` indique où il est, sinon la commande s'arrête sur « modèle introuvable », code de sortie 1.
+- **Pour celui qui développe** : `predict.py` est déplacé dans le paquet `sentiment_app` (par `git mv`, son historique suit) ; `src/predict.py` reste comme fichier de compatibilité, si bien que `python src/predict.py` et `import predict` marchent toujours. `api/model.py` importe `sentiment_app.predict` et ne modifie plus `sys.path`. `pip install -e .` installe le paquet en mode développement. La version est écrite une seule fois, dans `sentiment_app/__init__.py`.
+- **Pour la CI** : scikit-learn est épinglé en 1.5, comme dans le paquet ; une nouvelle étape construit la roue, l'installe dans un environnement neuf hors du dépôt et y fait une prédiction. 104 passed, 1 xfailed.
 
 ## 0.5.0 (TP5) : l'interface
 
