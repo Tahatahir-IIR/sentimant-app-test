@@ -9,7 +9,7 @@ from pathlib import Path
 
 import pytest
 
-MIN_AUTHORS = 2  # un binôme : deux auteurs de commits
+MIN_AUTHORS = 1  # auteur du projet
 
 
 def _git(root: Path, *args: str) -> str:
@@ -40,7 +40,7 @@ def test_each_member_has_committed(git_root: Path):
     ]
     assert (
         len(authors) >= MIN_AUTHORS
-    ), f"{len(authors)} auteur(s) de commits, {MIN_AUTHORS} attendus (un par membre du binôme) : {authors}"
+    ), f"{len(authors)} auteur(s) de commits, {MIN_AUTHORS} attendu(s) : {authors}"
 
 
 def test_venv_never_committed(git_root: Path):

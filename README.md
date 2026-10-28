@@ -1,4 +1,4 @@
-# sentiment-app : dépôt du binôme
+# sentiment-app
 
 Application fil rouge du cours *Développement et déploiement d'applications intelligentes* (A. Larhlimi).
 Le besoin : une équipe relation client reçoit des milliers d'avis par jour et veut voir les **avis négatifs** en
@@ -113,9 +113,8 @@ sentiment-app/
 
 Le dossier `app/`, prévu par le kit du TP1, est resté vide : l'API du TP3 vit dans `api/`.
 
-## Membres du binôme
+## Auteur
 
 | Rôle | Nom | Identifiant GitHub | Travail de la semaine 1 |
 | --- | --- | --- | --- |
-| Membre A | Taha Tahir | Tahatahir-IIR | |
-| Membre B | KHALDOUN Soufiane | Soufiane205 | |
+| Auteur | Taha Tahir | Tahatahir-IIR | |

@@ -40,3 +40,8 @@ htmlcov/
 
 # TP5
 !data/avis_exemple.csv
+
+# Agent and IDE configs
+.agents/
+.claude/
+
